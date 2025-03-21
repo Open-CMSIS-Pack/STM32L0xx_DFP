@@ -2430,7 +2430,7 @@ Typical applications include application control and user interfaces, handheld e
         #define CMSIS_device_header "stm32l0xx.h"
       </RTE_Components_h>
       <files>
-        <file category="doc" name="https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/CubeMX.md"/>
+        <file category="doc" name="https://open-cmsis-pack.github.io/cmsis-toolbox/CubeMX/"/>
       </files>
     </component>
   </components>
