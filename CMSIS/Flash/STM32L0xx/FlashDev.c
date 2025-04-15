@@ -1,5 +1,5 @@
 /* -----------------------------------------------------------------------------
- * Copyright (c) 2014 - 2015 ARM Ltd.
+ * Copyright (c) 2014 - 2015, 2025 ARM Ltd.
  *
  * This software is provided 'as-is', without any express or implied warranty. 
  * In no event will the authors be held liable for any damages arising from 
@@ -18,20 +18,22 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *   
  *
- * $Date:        14. September 2015
- * $Revision:    V1.01
+ * $Date:        15. April 2025
+ * $Revision:    V1.02
  *  
  * Project:      Flash Device Description for ST STM32L0xx Flash
  * --------------------------------------------------------------------------- */
 
 /* History:
+ *  Version 1.02
+ *    Aligned the sector size to the page size (EEPROM algorithms)
  *  Version 1.01
  *    Added EEPROM algorithm
  *  Version 1.00
  *    Initial release
  */ 
 
-#include "..\FlashOS.H"        // FlashOS Structures
+#include "..\FlashOS.h"        // FlashOS Structures
 
 #ifdef FLASH_MEMORY
 
@@ -49,7 +51,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (64 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (64 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_16
@@ -68,7 +70,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (128 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (128 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_16
@@ -87,7 +89,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (256 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (256 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_32
@@ -106,7 +108,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (512 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (512 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_64
@@ -125,7 +127,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (1024 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (1024 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_128
@@ -144,7 +146,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x080, 0x000000,           // Sector Size 128B (1536 Sectors)
+   0x080, 0x000000,           // Sector Size 128 Byte (1536 Sectors)
    SECTOR_END
 };
 #endif // STM32L0xx_192
@@ -168,7 +170,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x200, 0x000000,            // Sector Size 256B (16 Sectors)
+   0x100, 0x000000,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // category1
@@ -187,7 +189,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x400, 0x000000,            // Sector Size 1KB
+   0x100, 0x000000,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // category2
@@ -206,7 +208,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x800, 0x000000,            // Sector Size 2KB
+   0x100, 0x000000,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // category3
@@ -214,10 +216,10 @@ struct FlashDevice const FlashDevice  =  {
 #ifdef category5  // STM32L071, STM32L081, STM32L072, STM32L082, STM32L073 and STM32L083 devices
 struct FlashDevice const FlashDevice  =  {
    FLASH_DRV_VERS,             // Driver Version, do not modify!
-   "STM32L0 2 KByte Data EEPROM",  // Device Name (2KB)
+   "STM32L0 6 KByte Data EEPROM",  // Device Name (6KB)
    ONCHIP,                     // Device Type
    0x08080000,                 // Device Start Address
-   0x00001800,                 // Device Size in Bytes (2kB)
+   0x00001800,                 // Device Size in Bytes (6kB)
    256,                        // Programming Page Size (256B)
    0,                          // Reserved, must be 0
    0x00,                       // Initial Content of Erased Memory
@@ -225,8 +227,8 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-     0xC00, 0x000000,            // Sector Size 3KB
-	0xC00, 0x000C00,            // Sector Size 3KB
+   0x100, 0x000000,            // Sector Size 256 Byte
+   0x100, 0x000C00,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // category5
@@ -234,10 +236,10 @@ struct FlashDevice const FlashDevice  =  {
 #ifdef category5_64  // STM32L071, STM32L081, STM32L072, STM32L082, STM32L073 and STM32L083 devices
 struct FlashDevice const FlashDevice  =  {
    FLASH_DRV_VERS,             // Driver Version, do not modify!
-   "STM32L0 2 KByte Data EEPROM",  // Device Name (2KB)
+   "STM32L0 3 KByte Data EEPROM",  // Device Name (3KB)
    ONCHIP,                     // Device Type
    0x08080C00,                 // Device Start Address
-   0x00000C00,                 // Device Size in Bytes (2kB)
+   0x00000C00,                 // Device Size in Bytes (3kB)
    256,                        // Programming Page Size (256B)
    0,                          // Reserved, must be 0
    0x00,                       // Initial Content of Erased Memory
@@ -245,7 +247,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0xC00, 0x000000,            // Sector Size 3KB
+   0x100, 0x000000,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // category5_64
@@ -302,7 +304,7 @@ struct FlashDevice const FlashDevice  =  {
    500,                        // Erase Sector Timeout 500 mSec
 
 // Specify Size and Address of Sectors
-   0x200, 0x000000,            // Sector Size 512 Byte
+   0x100, 0x000000,            // Sector Size 256 Byte
    SECTOR_END
 };
 #endif // L010x6_8
