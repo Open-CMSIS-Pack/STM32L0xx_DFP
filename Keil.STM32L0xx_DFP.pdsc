@@ -21,6 +21,9 @@
       Updateed Templates:
       - Added DWARF-5 debug information
       - Added generated output files
+      Package Description (pdsc):
+      - Shortened device family description
+      - Added Ddsp processor attribute
     </release>
     <release version="2.3.0" date="2024-03-11">
       Updated STM32Cube FW to STM32Cube_FW_L0_V1.12.2 (HAL V1.10.6).
@@ -181,17 +184,12 @@
 
   <devices>
     <family Dfamily="STM32L0 Series" Dvendor="STMicroelectronics:13">
-      <processor Dcore="Cortex-M0+" DcoreVersion="r0p0" Dfpu="0" Dendian="Little-endian"/>
+      <processor Dcore="Cortex-M0+" DcoreVersion="r0p0" Dfpu="0" Dendian="Little-endian" Ddsp="NO_DSP"/>
 
       <book name="https://developer.arm.com/documentation/dui0662/latest" title="Cortex-M0+ Generic User Guide"/>
 
       <description>
-The STM32L0 devices provides high power efficiency for a wide range of performance. It is achieved with a large choice of internal and external clock sources, an internal voltage adaptation and several low-power modes.
-Typical applications include application control and user interfaces, handheld equipment, A/V receivers and digital TV, PC peripherals, gaming and GPS platforms, industrial applications, PLCs, inverters, printers, scanners, alarm systems, video intercoms, and HVACs
-
-  - CRC calculation unit, 96-bit unique ID
-  - USB 2.0 crystal-less, battery charging detection and LPM
-  - True RNG and firewall protection
+Ultra-low-power STM32L0 MCUs with Arm Cortex-M0+ core, MPU, 0.95 DMIPS at 32 MHz.
       </description>
 
       <sequences>
