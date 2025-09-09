@@ -15,7 +15,8 @@
   <releases>
     <release version="3.0.2-dev">
       Active development ...
-      Updated EEPROM Flash Algorithms (Aligned the sector size with the page size).
+      Updated EEPROM Flash Algorithms (Aligned the sector size with the page size)
+      Updated documentation references
     </release>
     <release version="2.3.0" date="2024-03-11">
       Updated STM32Cube FW to STM32Cube_FW_L0_V1.12.2 (HAL V1.10.6).
