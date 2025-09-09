@@ -16,6 +16,7 @@
     <release version="3.0.2-dev">
       Active development ...
       Updated EEPROM Flash Algorithms (Aligned the sector size with the page size)
+      Updated debug configuration files
       Updated documentation references
     </release>
     <release version="2.3.0" date="2024-03-11">
@@ -309,10 +310,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L010xx"/>
         <debug svd="CMSIS/SVD/STM32L0x0.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x0.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x0.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0x80201801;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -405,10 +406,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L011xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -551,10 +552,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L021xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -607,10 +608,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L031xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -753,10 +754,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L041xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -845,10 +846,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L051xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1045,10 +1046,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L052xx"/>
         <debug svd="CMSIS/SVD/STM32L052.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1258,10 +1259,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L053xx"/>
         <debug svd="CMSIS/SVD/STM32L053.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1392,10 +1393,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L062xx"/>
         <debug svd="CMSIS/SVD/STM32L062.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1463,10 +1464,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L063xx"/>
         <debug svd="CMSIS/SVD/STM32L063.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1530,10 +1531,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L071xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1749,10 +1750,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L072xx"/>
         <debug svd="CMSIS/SVD/STM32L0x2.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -1987,10 +1988,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L073xx"/>
         <debug svd="CMSIS/SVD/STM32L0x3.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -2146,10 +2147,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L081xx"/>
         <debug svd="CMSIS/SVD/STM32L0x1.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -2215,10 +2216,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L082xx"/>
         <debug svd="CMSIS/SVD/STM32L0x2.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
@@ -2280,10 +2281,10 @@ Typical applications include application control and user interfaces, handheld e
         <compile define="STM32L083xx"/>
         <debug svd="CMSIS/SVD/STM32L0x3.svd"/>
 
-        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L0x1_0x2_0x3.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000006;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
-          __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ: All Peripherals Operate as in Normal Mode
-          __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB1_Fz = 0xC0201833;   // DGBMCU_APB1_FZ: Configure APB1 peripheral freeze behavior
+          __var DbgMCU_APB2_Fz = 0x00000024;   // DGBMCU_APB2_FZ: Configure APB2 peripheral freeze behavior
           __var DoOptionByteLoading = 0;       // Disabled
         </debugvars>
 
