@@ -13,17 +13,8 @@
   </licenseSets>
 
   <releases>
-    <release version="3.0.2-dev">
+    <release version="3.1.1-dev">
       Active development ...
-      Updated EEPROM Flash Algorithms (Aligned the sector size with the page size)
-      Updated debug configuration files
-      Updated documentation references
-      Updateed Templates:
-      - Added DWARF-5 debug information
-      - Added generated output files
-      Package Description (pdsc):
-      - Shortened device family description
-      - Added Ddsp processor attribute
     </release>
     <release version="2.3.0" date="2024-03-11">
       Updated STM32Cube FW to STM32Cube_FW_L0_V1.12.2 (HAL V1.10.6).
