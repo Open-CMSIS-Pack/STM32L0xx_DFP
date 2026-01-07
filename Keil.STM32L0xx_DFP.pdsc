@@ -2358,7 +2358,7 @@ Ultra-low-power STM32L0 MCUs with Arm Cortex-M0+ core, MPU, 0.95 DMIPS at 32 MHz
         <!-- *************************  Device 'STM32L083V8Tx'  ***************************** -->
         <device Dname="STM32L083V8Tx">
           <memory name="Flash" access="rx"                       start="0x08000000" size="0x00010000" default="1" startup="1"/>
-          <memory name="SRAM"  access="rwx"                      start="0x20000000" size="0x00050000" default="1"/>
+          <memory name="SRAM"  access="rwx"                      start="0x20000000" size="0x00005000" default="1"/>
           <algorithm name="CMSIS/Flash/STM32L0xx_64.FLM"         start="0x08000000" size="0x00010000" default="1"/>
           <algorithm name="CMSIS/Flash/STM32L07x_64_EEPROM.FLM"  start="0x08080C00" size="0x00000800" default="0"/>
 
